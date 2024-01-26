@@ -1,0 +1,13 @@
+.SelectType{
+    width: 200px;
+    border: none;
+    margin-left: 1.2em;
+    height: 40px;
+    padding-left: 0.8em;
+    outline: none;
+    box-shadow: 1px 1px 4px  #0006;
+}
+
+.SelectType__typeName {
+    text-transform: capitalize;
+}
