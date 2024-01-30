@@ -3,6 +3,7 @@ import useFetch from '../../hooks/useFetch'
 import { useNavigate } from 'react-router-dom'
 import './styles/PokeCard.css'
 
+
 const PokeCard = ({ url }) => {
 
     const [pokemon, getPokemon] = useFetch(url)
@@ -11,7 +12,7 @@ const PokeCard = ({ url }) => {
         getPokemon()
     }, [])
 
-
+    // console.log(pokemon);
 
     const navigate = useNavigate()
 
@@ -20,7 +21,10 @@ const PokeCard = ({ url }) => {
     }
 
     return (
+        <>
+        
             <div className={`pokecard__border ${pokemon?.types[0].type.name}`} onClick={handleNavigatePokemon}>
+                
                 <article className='pokecard'>
                     <header className='pokecard__header'>
                         <img className='pokecard__img' src={pokemon?.sprites.other['official-artwork'].front_default} alt="" />
@@ -48,6 +52,8 @@ const PokeCard = ({ url }) => {
                     </section>
                 </article>
             </div>
+            
+        </>
     )
 }
 

@@ -1,0 +1,27 @@
+.pagination{
+    width: 100%;
+}
+.pagination-link.is-current{
+    background-color: red;
+    border-color: #ff0000;
+}
+.ss1{
+    background-color: red;
+    border-color: #ff0000;
+    color: white;
+    transition: scale .2s ease-in;
+    margin: 2em 0;
+    &:hover{
+        color: white;
+        
+    } 
+}
+.pagination-previous{
+    margin-left: 3em;
+}
+.pagination-next{
+    margin-right: 3em;
+}
+.ss1:active{
+    scale: 0.95;
+}

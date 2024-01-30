@@ -1,0 +1,99 @@
+.pokedexPagination__contenedor{
+width: 100%;
+height: 80px;
+background-color: red;
+display: flex;
+align-items: end;
+position: relative;
+}
+.pokedexPagination__header__img{
+    width: 60%;
+    max-width: 300px;
+    margin-left: 2%;
+    position: absolute;
+    top: 50px;
+    z-index: 2;
+}
+.pokedexPagination__black{
+    width: 100%;
+    height: 40px;
+    background-color: #000;
+    margin-bottom: 2.5em;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+}
+
+.Protected__pokebola {
+    position: absolute;
+    width: var(--pokebola-sizes);
+    height: var(--pokebola-sizes);
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid #000;
+    overflow: hidden;
+    box-shadow: inset calc(var(--pokebola-sizes) * 0.1) calc(var(--pokebola-sizes) * -0.075) 0 calc(var(--pokebola-sizes) * 0.05) #0004;
+    margin-right: 2em;
+    cursor: pointer;
+    top: -25px;
+
+}
+.Protected__pokebola:hover{
+    animation: rotatePokeball 2s infinite linear;
+}
+
+.Protected__pokebola::before {
+    content: '';
+    width: calc(var(--pokebola-sizes) * 2);
+    height: calc(var(--pokebola-sizes) * 0.55);
+    background-color: red;
+    position: absolute;
+    border-radius: 50%;
+    margin-left: calc(var(--pokebola-sizes) * -0.5);
+    border-bottom: calc(var(--pokebola-sizes) * 0.1) solid #000;
+}
+
+.Protected__pokebola::after {
+    content: '';
+    width: calc(var(--pokebola-sizes) * 0.2);
+    height: calc(var(--pokebola-sizes) * 0.3);
+    background-color: #fff;
+    position: absolute;
+    top: calc(var(--pokebola-sizes) * 0.1);
+    left: calc(var(--pokebola-sizes) * 0.67);
+    border-radius: 50%;
+    transform: rotate(-40deg);
+}
+
+.protected__detail {
+    width: var(--pokebola2-sizes);
+    height: var(--pokebola2-sizes);
+    background-color: #fff;
+    position: absolute;
+    top: calc(50% - var(--pokebola2-sizes) * 0.3);
+    left: calc(50% - var(--pokebola2-sizes) * 0.3);
+    border-radius: 50%;
+    border: calc(var(--pokebola2-sizes) * 0.2) solid #000;
+}
+
+.protected__detail::before {
+    content: '';
+    width: calc(var(--pokebola2-sizes) * 0.5);
+    height: calc(var(--pokebola2-sizes) * 0.5);
+    background-color: #fff;
+    position: absolute;
+    top: calc(var(--pokebola2-sizes) * 0.14 - 1px);
+    left: calc(var(--pokebola2-sizes) * 0.05);
+    border-radius: 50%;
+    border: calc(var(--pokebola2-sizes) * 0.04) solid #000;
+    
+}
+@keyframes rotatePokeball {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

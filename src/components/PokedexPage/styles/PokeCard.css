@@ -113,6 +113,13 @@
     border-radius: 0.8em;
     width: 100%;
     max-width: 340px;
+    transition: scale .4s;
+
+    &:hover{
+        scale: 1.1;
+        z-index: 1;
+        cursor: pointer;
+    }
 }
 
 .pokecard {

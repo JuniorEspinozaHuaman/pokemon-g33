@@ -1,0 +1,221 @@
+:root {
+    --pokebola-size: 100px;
+    --pokebola2-size: 25px;
+    --pokebola-sizes: 50px;
+    --pokebola2-sizes: 12.5px;
+}
+
+.HomePage {
+    width: 100%;
+    height: 100vh;
+}
+
+.HomePage__figure {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 40vh;
+    background-color: red;
+    padding-bottom: 1em;
+}
+
+.HomePage__img {
+    width: 80%;
+    max-width: 450px;
+}
+
+.HomePage__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    background-color: rgba(0, 0, 0, 0.918);
+}
+
+.HomePage__title {
+    color: red;
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 1px 1px #fff;
+}
+
+.HomePage__text {
+    color: white;
+    font-size: 1.2rem;
+    margin: 0.3em 0 0.3em 0;
+    white-space: nowrap;
+    border-right: 4px solid #fff;
+    width: 33ch;
+    animation: textanimation 4s infinite alternate;
+    overflow: hidden;
+    margin-bottom: 1em;
+}
+
+@keyframes textanimation {
+    from { width: 0;}
+}
+
+.HomePage__form {
+    padding-bottom: 1em;
+}
+
+.HomePage__input {
+    width: 200px;
+    max-width: 250px;
+    height: 40px;
+    padding-left: 1em;
+    border: none;
+    box-shadow: 1px 1px 4px #000;
+    border-radius: 0.4em 0 0 0.4em;
+}
+
+.HomePage__input::placeholder {
+    font-size: 1.05rem;
+}
+
+.HomePage__button {
+    width: 120px;
+    border: none;
+    height: 40px;
+    color: white;
+    background-color: red;
+    font-weight: 700;
+    box-shadow: 1px 1px 4px #000;
+    border-radius: 0 0.4em 0.4em 0;
+}
+
+.HomePage__footer {
+    width: 100%;
+    background-color: #615f5f27;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.HomePage__pokebola {
+    position: relative;
+    width: var(--pokebola-size);
+    height: var(--pokebola-size);
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid #000;
+    overflow: hidden;
+    box-shadow: inset calc(var(--pokebola-size) * 0.1) calc(var(--pokebola-size) * -0.075) 0 calc(var(--pokebola-size) * 0.05) #0004;
+    cursor: pointer;
+}
+
+.HomePage__pokebola:hover {
+    animation: rotatePokebola 2s infinite linear;
+}
+
+.HomePage__pokebola::before {
+    content: '';
+    width: calc(var(--pokebola-size) * 2);
+    height: calc(var(--pokebola-size) * 0.55);
+    background-color: red;
+    position: absolute;
+    border-radius: 50%;
+    margin-left: calc(var(--pokebola-size) * -0.5);
+    border-bottom: calc(var(--pokebola-size) * 0.1) solid #000;
+}
+
+.HomePage__pokebola::after {
+    content: '';
+    width: calc(var(--pokebola-size) * 0.2);
+    height: calc(var(--pokebola-size) * 0.3);
+    background-color: #fff;
+    position: absolute;
+    top: calc(var(--pokebola-size) * 0.1);
+    left: calc(var(--pokebola-size) * 0.67);
+    border-radius: 50%;
+    transform: rotate(-40deg);
+}
+
+.HomePage__detail {
+    width: var(--pokebola2-size);
+    height: var(--pokebola2-size);
+    background-color: #fff;
+    position: absolute;
+    top: calc(50% - var(--pokebola2-size) * 0.3);
+    left: calc(50% - var(--pokebola2-size) * 0.3);
+    border-radius: 50%;
+    border: calc(var(--pokebola2-size) * 0.2) solid #000;
+}
+
+.HomePage__detail::before {
+    content: '';
+    width: calc(var(--pokebola2-size) * 0.5);
+    height: calc(var(--pokebola2-size) * 0.5);
+    background-color: #fff;
+    position: absolute;
+    top: calc(var(--pokebola2-size) * 0.09 - 1px);
+    left: calc(var(--pokebola2-size) * 0.05);
+    border-radius: 50%;
+    border: calc(var(--pokebola2-size) * 0.04) solid #000;
+
+}
+
+@keyframes rotatePokebola {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-height: 790px){
+    .HomePage__figure {
+        height: 40vh;
+    }
+    .HomePage__container {
+        height: 25vh;
+    }
+    .HomePage__footer {
+        height: 35vh;
+    }
+}
+
+@media screen and (max-height: 450px){
+    .HomePage__pokebola{
+        --pokebola-size: 70px;
+        --pokebola2-size: 17.5px;
+    }
+    .HomePage__figure {
+        align-items: start;
+        padding-top: 1em;
+        height: 35vh;
+    }
+    .HomePage__container {
+        height: 35vh;
+    }
+    .HomePage__footer {
+        height: 30vh;
+    }
+    .HomePage__title {
+        font-size: 1.7rem;
+    }
+    .HomePage__text {
+        margin: 0.3em 0 0.3em 0;
+    }
+    .HomePage__form {
+        padding-bottom: 0.5em;
+    }
+   
+    .HomePage__input {
+        height: 30px;
+    }
+    .HomePage__button {
+        width: 120px;
+        height: 30px;
+    }
+    .HomePage__detail::before {
+        top: calc(var(--pokebola2-size) * 0.13 - 1px);
+        left: calc(var(--pokebola2-size) * 0.08);
+    }
+}
+
