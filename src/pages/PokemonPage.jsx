@@ -2,6 +2,9 @@ import { useParams } from "react-router-dom"
 import useFetch from "../hooks/useFetch"
 import { useEffect } from "react"
 import './styles/PokemonPage.css'
+import { useNavigate } from "react-router-dom/dist"
+import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const PokemonPage = () => {
 
@@ -14,10 +17,17 @@ const PokemonPage = () => {
     getPokemon()
   }, [])
 
+  const navigate =useNavigate()
+    const navigatePokedex = () => {
+        navigate('/pokedex')
+    }
+
 
   return (
     <section className="PokemonPage">
-
+      <a className="pokemonPage__back" onClick={navigatePokedex}>
+        <span className="pokemonPage__back__icon"><FontAwesomeIcon icon={faCircleArrowLeft} /></span>
+      </a>
       <article className="PokemonPage__container__pokeInfo">
         <div className={`pokemonPage__header ${pokemon?.types[0].type.name}`}>
           <img className="PokemonPage__img" src={pokemon?.sprites.other['official-artwork'].front_default} alt="" />
@@ -28,7 +38,7 @@ const PokemonPage = () => {
           <h2 className={`PokemonPage__name ${pokemon?.types[0].type.name}`}>{pokemon?.name}</h2>
           <hr className="pokemonPage__hr" />
         </div>
-
+        
         <ul className="PokemonPage__list__IMC">
           <li className="PokemonPage__IMC__item">
             <span className="PokemonPage__IMC__name">Weight</span>

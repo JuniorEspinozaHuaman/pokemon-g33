@@ -7,11 +7,11 @@ const ProtectedRoutes = () => {
    const trainer = useSelector(state => state.trainer)
 
    if (trainer.length >= 3) {
-      return <div>
-         <div className='pokedexPagination__contenedor'>
-            <img className='pokedexPagination__header__img' src={pokedex} alt="" />
+      return <div className='Protected'>
+         <div className='Protected__contenedor'>
+            <img className='Protected__header__img' src={pokedex} alt="" />
          </div>
-         <div className='pokedexPagination__black'>
+         <div className='Protected__black'>
             <div className="Protected__pokebola">
                <div className="protected__detail"></div>
             </div>

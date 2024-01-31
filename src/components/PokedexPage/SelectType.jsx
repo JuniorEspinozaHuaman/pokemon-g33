@@ -14,13 +14,13 @@ const SelectType = ({ setTypeSelected }) => {
         getTypes()
     }, [])
 
-    // console.log(types);
+    
     const typeRef = useRef()
 
     const handleChange = e => {
         setTypeSelected(typeRef.current.value)
     }
-    console.log(types);
+   
     return (
         <select className="SelectType" ref={typeRef} onChange={handleChange}>
             <option className="SelectType__option__all" value='allPokemons'>All Pokemons</option>

@@ -123,9 +123,10 @@
 }
 
 .pokecard {
-    background-color: white;
+    background: var(--bgc);
     border-radius: 0.5em;    
     overflow: hidden;
+    
 }
 
 .pokecard__header {
@@ -140,6 +141,8 @@
     top: 20%;
     left: 50%;
     transform: translateX(-50%);
+    caret-color: transparent;
+    user-select: none;
 }
 
 .pokecard__body {
@@ -165,6 +168,7 @@
     font-size: 0.9rem;
     font-weight: 300;
     text-transform: capitalize;
+    color: var(--cltext);
 }
 
 .pokecard__types__item:nth-child(2)::before {
@@ -183,6 +187,7 @@
     grid-template-columns: repeat(3, 1fr);
     padding: 0.5em 1em 2em;
     gap: 1em 0.5em;
+    color: var(--cltext);
 }
 
 .pokecard__stats__item {

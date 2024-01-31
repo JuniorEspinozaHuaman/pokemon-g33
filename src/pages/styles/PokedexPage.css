@@ -1,6 +1,29 @@
+.darkm{
+    --bgc:#16181d;
+    --cltext: #fff;
+    --brsdw: 1px 2px 6px #000;
+    --cltextsecundary: #ffffffb0;
+    --border:1px groove rgb(37, 37, 48);
+    --pgbarr: rgba(38, 38, 46, 0.486);
+    --brbarr: 10px solid #14151a;
+    --bgh:#d6cece;
+    
+    transition: --bgc 10.3s ease-in-out, color 0.3s ease-in-out;
+}
+.lightm{
+    --bgc:white;
+    --cltext: #000;
+    --brsdw: 1px 1px 4px #0006;
+    --cltextsecundary: rgba(0, 0, 0, 0.781);
+    --border:1px groove;
+    --pgbarr: #E5E5E5;
+    --brbarr: 10px solid #F6F6F6;
+    --bgh:#fff;
+
+}
 .PokedexPage {
     width: 100%;
-    /* background-color: aqua; */
+    background: var(--bgc);
 }
 .container__pokecard {
     display: flex;
@@ -27,6 +50,7 @@
     margin-bottom: 1.3em;
     margin-left: 2em;
     margin-right: 1em;
+    color: var(--cltext);
 }
 .pokedexPage__Name {
     color: red;
@@ -52,4 +76,19 @@
     background-color: red;
     color: #fff;
     box-shadow: 1px 1px 4px  #0006;
+}
+.PokedexPage__icon__container {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 1em;
+    transition: all 5s ease-in-out;
+}
+
+.PokedexPage__icon{
+    color: black;
+    font-size: 1.5em;
+}
+.PokedexPage__icon--sun{
+    color: #fff;
 }

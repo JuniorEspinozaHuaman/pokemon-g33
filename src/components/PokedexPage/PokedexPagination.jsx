@@ -22,28 +22,7 @@ const PokedexPagination = ({ productsPerPage, currentPage, setCurrentPage, total
         setCurrentPage(n)
     }
 
-
     return (
-        // <nav className="pagination is-centered mb-6 mt-6 ml-3 mr-3" role="navigation" aria-label="pagination">
-        //     <a className={`pagination-previous ${currentPage === 1 ? 'is-disabled' : ''}`} onClick={previousPage}>Previous</a>
-        //     <a className={`pagination-next ${currentPage >= pageNumbers.length ? 'is-disabled' : ''}`} onClick={nextPage}>Next page</a>
-        //     <ul className="pagination-list">
-        //         {
-        //             [
-        //                 ...pageNumbers.slice(0, 1),
-        //                 currentPage > maxVisibleButtons && ellipsis,
-        //                 ...pageNumbers.slice(Math.max(currentPage - 2, 1), Math.min(currentPage + 2, pageNumbers.length - 1)),
-        //                 currentPage < pageNumbers.length - maxVisibleButtons && ellipsis,
-        //                 ...pageNumbers.slice(-1)
-        //               ]
-        //                 .map(noPage => (
-        //                     <li key={noPage}>
-        //                         <a className={`pagination-link ${noPage === currentPage ? 'is-current' : ''}`} onClick={() => specificPage(noPage)}>{noPage}</a>
-        //                     </li>
-        //                 ))
-        //         }
-        //     </ul>
-        // </nav>
         <nav className="pagination is-centered" role="navigation" aria-label="pagination">
             <a className={`pagination-previous ss1 ${currentPage === 1 ? 'is-disabled' : ''}`} onClick={previousPage}>Previous</a>
             <a className={`pagination-next ss1 ${currentPage >= pageNumbers.length ? 'is-disabled' : ''}`} onClick={nextPage}>Next page</a>

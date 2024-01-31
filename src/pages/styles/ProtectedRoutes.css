@@ -1,4 +1,7 @@
-.pokedexPagination__contenedor{
+.Protected{
+    background: var(--bgh);
+}
+.Protected__contenedor{
 width: 100%;
 height: 80px;
 background-color: red;
@@ -6,7 +9,7 @@ display: flex;
 align-items: end;
 position: relative;
 }
-.pokedexPagination__header__img{
+.Protected__header__img{
     width: 60%;
     max-width: 300px;
     margin-left: 2%;
@@ -14,7 +17,7 @@ position: relative;
     top: 50px;
     z-index: 2;
 }
-.pokedexPagination__black{
+.Protected__black{
     width: 100%;
     height: 40px;
     background-color: #000;
@@ -40,7 +43,7 @@ position: relative;
 
 }
 .Protected__pokebola:hover{
-    animation: rotatePokeball 2s infinite linear;
+    animation: rotatePokeball 1s infinite linear;
 }
 
 .Protected__pokebola::before {

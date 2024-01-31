@@ -5,6 +5,9 @@
     background-color: red;
     border-color: #ff0000;
 }
+.pagination-link{
+    color: var(--cltext);
+}
 .ss1{
     background-color: red;
     border-color: #ff0000;
