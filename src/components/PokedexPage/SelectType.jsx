@@ -12,6 +12,7 @@ const SelectType = ({ setTypeSelected }) => {
 
     useEffect(() => {
         getTypes()
+        
     }, [])
 
     

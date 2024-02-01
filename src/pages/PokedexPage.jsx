@@ -40,6 +40,7 @@ const PokedexPage = ({ darkMode, darkm }) => {
     const handleSearch = e => {
         e.preventDefault()
         setInputValue(inputName.current.value.trim().toLowerCase())
+        setCurrentPage(1)
     }
 
     const cbFilter = (pokeInfo) => pokeInfo.name.toLowerCase().includes(inputValue)
