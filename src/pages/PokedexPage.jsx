@@ -20,7 +20,7 @@ const PokedexPage = ({ darkMode, darkm }) => {
     const totalPokemons = pokemons?.results.filter(pokemon => pokemon.name.includes(inputValue)).length
     // const totalPokemons = pokemons?.results.length
     // console.log(pokemons?.results.filter(i => i.name.includes(inputValue)).length);
-    console.log(totalPokemons);
+    // console.log(totalPokemons);
 
     const [productsPerPage, setProductsPerPage] = useState(20)
     const [currentPage, setCurrentPage] = useState(1)
