@@ -17,8 +17,10 @@ const PokedexPage = ({ darkMode, darkm }) => {
 
     const url = 'https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0'
     const [pokemons, getPokemons, getTypePokemon] = useFetch(url)
-
-    const totalPokemons = pokemons?.results.length
+    const totalPokemons = pokemons?.results.filter(pokemon => pokemon.name.includes(inputValue)).length
+    // const totalPokemons = pokemons?.results.length
+    // console.log(pokemons?.results.filter(i => i.name.includes(inputValue)).length);
+    console.log(totalPokemons);
 
     const [productsPerPage, setProductsPerPage] = useState(20)
     const [currentPage, setCurrentPage] = useState(1)
@@ -42,8 +44,11 @@ const PokedexPage = ({ darkMode, darkm }) => {
         setInputValue(inputName.current.value.trim().toLowerCase())
         setCurrentPage(1)
     }
-
+    // pika
     const cbFilter = (pokeInfo) => pokeInfo.name.toLowerCase().includes(inputValue)
+
+    // console.log(inputValue);
+    
 
 
     return (
